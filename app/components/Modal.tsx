@@ -47,15 +47,18 @@ interface ModalProps {
 // Uppercases the first letter of each word in the title
 function titleCase(value: string): string {
     let title = '';
-    let shouldUpcase = true;
+    // let shouldUpcase = true;
     for (let i = 0; i < value.length; i++) {
-        if (shouldUpcase) {
-            title += value[i].toUpperCase();
-            shouldUpcase = false;
+        if(!(value[i-1]) || (value[i-1] === ' ')) {
+            title += value[i];
         }
-        if (value[i] === ' ') {
-            shouldUpcase = true;
-        }
+        // if (shouldUpcase) {
+        //     title += value[i];
+        //     // shouldUpcase = false;
+        // }
+        // if (value[i] === ' ') {
+            // shouldUpcase = true;
+        // }
     }
 
     return title;
@@ -135,7 +138,7 @@ const Modal = ({movie, position, close}: ModalProps) => {
                 <View style={styles.content}>
                     <ScrollView>
                         <Text style={styles.paragraph}>
-                            <Text style={{fontWeight: 'bold'}}>
+                            <Text style={styles.movieNameInitial}>
                                 {`${titleCase(movie.name)} `}
                             </Text>
                             <Text style={styles.paragraph}>
@@ -161,6 +164,10 @@ const styles = StyleSheet.create({
         fontSize: 24,
         marginBottom: 16,
     },
+    movieNameInitial: {
+        fontWeight: 'bold',
+        textTransform: 'uppercase',
+    }
 });
 
 export default Modal;
