@@ -15,6 +15,7 @@ import {createValue, spring, springBack} from '@utils/spring';
 
 import type MovieType from '@app/types/Movie';
 import type PositionType from '@app/types/Position';
+import { Colors } from 'app/constants/constants';
 
 const {
     Value,
@@ -121,7 +122,7 @@ const Modal = ({movie, position, close}: ModalProps) => {
         <SwipeToClose y={translationY} opacity={opacity.value} {...{scale}}>
             <Animated.View
                 style={{
-                    backgroundColor: 'white',
+                    backgroundColor: Colors.white,
                     ...p,
                 }}
             />

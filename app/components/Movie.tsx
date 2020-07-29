@@ -8,6 +8,7 @@ import Poster from './Poster';
 
 import type MovieType from '@app/types/Movie';
 import type PositionType from '@app/types/Position';
+import { Colors } from 'app/constants/constants';
 
 interface MovieProps {
     activeMovieId: Animated.Value<number>;
@@ -90,7 +91,7 @@ const getStyles = memoize((width: number, height: number) =>
             width: '100%',
         },
         name: {
-            color: 'white',
+            color: Colors.white,
             fontSize: 34,
             lineHeight: 41,
             fontWeight: 'bold',
@@ -102,7 +103,7 @@ const getStyles = memoize((width: number, height: number) =>
             textShadowRadius: 2,
         },
         reviews: {
-            color: 'white',
+            color: Colors.white,
             fontSize: 18,
             textShadowColor: '#000',
             textShadowOffset: {

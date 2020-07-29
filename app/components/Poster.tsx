@@ -3,6 +3,7 @@ import {StyleSheet, Text, View} from 'react-native';
 import Animated from 'react-native-reanimated';
 
 import type MovieType from '@app/types/Movie';
+import { Colors } from 'app/constants/constants';
 
 interface PosterProps {
     movie: MovieType;
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     name: {
-        color: 'white',
+        color: Colors.white,
         fontSize: 34,
         lineHeight: 41,
         fontWeight: 'bold',
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     reviews: {
-        color: 'white',
+        color: Colors.white,
         fontSize: 18,
         textShadowColor: '#000',
         textShadowOffset: {
