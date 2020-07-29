@@ -48,7 +48,7 @@ const Movie = ({activeMovieId, index, movie, open}: MovieProps) => {
         }
     };
 
-    console.log('RENDER MOVIE', movie.name);
+    console.log('RENDER MOVIE', movie);
 
     return (
         <TouchableWithoutFeedback onPress={startTransition}>
@@ -72,7 +72,7 @@ const getStyles = memoize((width: number, height: number) =>
             alignSelf: 'center',
             borderRadius: 8,
             marginVertical: 8,
-            shadowColor: '#000',
+            shadowColor: Colors.black,
             shadowOffset: {
                 width: 0,
                 height: 2,
@@ -95,7 +95,7 @@ const getStyles = memoize((width: number, height: number) =>
             fontSize: 34,
             lineHeight: 41,
             fontWeight: 'bold',
-            textShadowColor: '#000',
+            textShadowColor: Colors.black,
             textShadowOffset: {
                 width: 1,
                 height: 2,
@@ -105,7 +105,7 @@ const getStyles = memoize((width: number, height: number) =>
         reviews: {
             color: Colors.white,
             fontSize: 18,
-            textShadowColor: '#000',
+            textShadowColor: Colors.black,
             textShadowOffset: {
                 width: 1,
                 height: 2,

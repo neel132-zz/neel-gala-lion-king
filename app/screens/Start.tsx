@@ -53,7 +53,7 @@ const Start = () => {
             <StatusBar barStyle="dark-content" />
             <SafeAreaView>
                 <FlatList
-                    data={movies}
+                    data={movies.filter(movie=> movie.name)}
                     extraData={movies}
                     renderItem={renderItem}
                     keyExtractor={(item, index) => String(index)}
